@@ -1,0 +1,309 @@
+baseURL: "https://karlosdaniel451.github.io"
+languageCode: "en-us"
+title: "My personal website"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "My personal website"
+  description: My personal website with info about me, my experiences, education and projects.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "https://png2.cleanpng.com/sh/4dd6a6c867b19bfc08b7e2b0d897c568/L0KzQoG3UsI0N6hmkJH9cnHxg8HokvVvfF5oh9ZybnewebT2jr1kd5VqRdtsb36wg7b7lPlvb6QygdV4bj24dYa5g8U5PpJrfaIAMz65RYS5UMU0QGI6UKQ9OEK7QoOAUsA1NqFzf3==/transparent-coding-icon-code-icon-settings-icon-5e52c586afe053.6532053815824828227204.png"
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "My personal website" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Karlos Daniel."
+    subtitle: "I'm a Software Engineering student"
+    content: |
+      I'm interested in backend development, distributed systems, databases and Python.
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Portfolio"
+      url: "/#projects"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/karlosdaniel451
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/karlos-daniel-pires-da-silva/
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a Brazilian Software Engineering student interested in backend development.
+      I'm currently enrolled in the 7th semester of the bacharelor's degree program in Software Engineering at the [Universidade Federal de Goiás (UFG)](https://inf.ufg.br/p/30140-engenharia-de-software?atr=en&locale=en).
+
+      I'm currently reading:
+        - Designing Data-Intensive Applications.
+        - Fundamentals of Database Systems.
+      
+    skills:
+      enable: true
+      title: "Recently, I've been delving in the following topics:"
+      items:
+        - "Web back-end development and RESTful Web Services with FastAPI."
+        - "Distributed Systems and their related concepts, such as reliability, scalability and availability."
+        - "Python"
+        - "Databases and SQL"
+        - "PostgreSQL"
+        - "Linux"
+        - "Docker and Docker Compose"
+        - "I also started to study Go recently"
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "IT intern with a focus on data cleaning and automation"
+        company: "Goiás State Government (Governo do Estado de Goiás)"
+        companyUrl: "https://www.goias.gov.br/"
+        date: "Mar 2022 - Fev 2023"
+        content: "I worked as an IT intern for my Government of my State with a focus on data extraction, cleaning and automation using Python, Requests, Pandas and SQL."
+
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bacharelor in Software Engineering"
+        school:
+          name: "Federal University of Goiás | Universidade Federal de Goiás (UFG)"
+          url: "https://inf.ufg.br/p/30140-engenharia-de-software?atr=en&locale=en"
+        date: "2020 - Present"
+        # content: |-
+        #   Some Projects or Activities:
+        #     - asdf
+      - title: "Information Technology Technician plus High School | Técnico em Informática Integrado ao Ensino Médio"
+        school:
+          name: "Federal Instituto of Goiás | Instituto Federal de Goiás (IFG)"
+          url: "http://cursos.ifg.edu.br/info/tecint/tec-inf-internet/CP-INH"
+        date: "2017 - 2019"
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Patient Transference System - Sistema de Transferência de Pacientes (STP)
+        content: |
+          Academic project done in my Software Engineering Undergraduate Course along 3 other students.
+          Such project is a prototype for a system which helps the transference of patients between hospitals
+          of the Brazilian public healthcare system (SUS). I was responsible for the backend design,
+          implementation and testing alongside one other student. The used technologies was Python, FastAPI,
+          PyTest, Poetry, Docker, Docker Compose and the REST architectural style.
+        image: /images/projects/profile.png
+        featured:
+          name: Source-code
+          link: https://github.com/karlosdaniel451/stp
+        badges:
+          - "Python"
+          - "REST"
+          - "FastAPI"
+          - "Postgres"
+          - "PyTest"
+          - "Docker"
+          - "Docker Compose"
+          - "Poetry"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/karlosdaniel451/stp
+
+      - title: My personal website
+        content: This personal website that you are viewing right now :c.
+        featured:
+          name: Source-code
+          link: https://github.com/karlosdaniel451/karlosdaniel451.github.io
+        badges:
+          - "Hugo"
+          - "GitHub Pages"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/karlosdaniel451/karlosdaniel451.github.io
+
+      - title: Simplified implementation of the Twitter home timeline system design
+        content:
+          Implementation of a simplified version of the Twitter home timeline system design.
+          This project is based on the system design described in the 1st chapter of Designing Data-Intensive
+          Applications by Martin Kleppmann.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Source-code
+          link: https://github.com/karlosdaniel451/twitter-timeline-system-design
+        badges:
+          - "System design"
+          - "Software architecture and design"
+          - "Data-intensive applications"
+          - "Distributed systems"
+          - "Scalability"
+          - "Databases"
+          - "SQL"
+          - "Python"
+          - "Go"
+          - "Redis"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/karlosdaniel451/twitter-timeline-system-design
+
+  #Contact
+  contact:
+    enable: true
+    title: "Contact me"
+    content: |
+      - [Linkedin profile](https://linkedin.com/in/karlos-daniel-pires-da-silva/)
+      - [GitHub profile](https://github.com/karlosdaniel451)
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/karlosdaniel451/
+      linkedin: https://www.linkedin.com/in/karlos-daniel-pires-da-silva/
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    # copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
