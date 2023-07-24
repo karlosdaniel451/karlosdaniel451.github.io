@@ -56,7 +56,7 @@ params:
   title: "My personal website"
   description: My personal website with info about me, my experiences, education and projects.
   # staticPath: ""  # The path to serve the static files from
-  favicon: "https://png2.cleanpng.com/sh/4dd6a6c867b19bfc08b7e2b0d897c568/L0KzQoG3UsI0N6hmkJH9cnHxg8HokvVvfF5oh9ZybnewebT2jr1kd5VqRdtsb36wg7b7lPlvb6QygdV4bj24dYa5g8U5PpJrfaIAMz65RYS5UMU0QGI6UKQ9OEK7QoOAUsA1NqFzf3==/transparent-coding-icon-code-icon-settings-icon-5e52c586afe053.6532053815824828227204.png"
+  favicon: "https://img.icons8.com/?size=512&id=HDAQztqKyadY&format=png"
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
   # Note the lack of "" in true, it should be of boolean type.
@@ -107,8 +107,8 @@ params:
     menus:
       disableAbout: false
       disableExperience: false
-      disableEducation: false
       disableProjects: false
+      disableEducation: false
       disableAchievements: true
       disableContact: false
 
@@ -119,7 +119,7 @@ params:
     title: "Karlos Daniel."
     subtitle: "I'm a Software Engineering student"
     content: |
-      I'm interested in backend development, distributed systems, databases and Python.
+      I'm interested in backend development, distributed systems, databases and Go.
     image: /images/hero.svg
     bottomImage:
       enable: true
@@ -151,21 +151,19 @@ params:
 
       I'm currently reading:
         - Designing Data-Intensive Applications.
-        - Fundamentals of Database Systems.
+        - Concurrency in Go.
       
     skills:
       enable: true
       title: "Recently, I've been delving in the following topics:"
       items:
-        - "Web back-end development and RESTful Web Services with FastAPI."
+        - "Web back-end development and RESTful Web Services with Go."
         - "Distributed Systems and their related concepts, such as reliability, scalability and availability."
-        - "Python"
+        - "Concurrent Programming"
         - "Databases and SQL"
         - "PostgreSQL"
         - "Linux"
         - "Docker and Docker Compose"
-        - "I also started to study Go recently"
-
 
   # Experience
   experience:
@@ -179,31 +177,27 @@ params:
         content: "I worked as an IT intern for my Government of my State with a focus on data extraction, cleaning and automation using Python, Requests, Pandas and SQL."
 
 
-  # Education
-  education:
-    enable: true
-    # title: "Custom Name"
-    index: false
-    items:
-      - title: "Bacharelor in Software Engineering"
-        school:
-          name: "Federal University of Goiás | Universidade Federal de Goiás (UFG)"
-          url: "https://inf.ufg.br/p/30140-engenharia-de-software?atr=en&locale=en"
-        date: "2020 - Present"
-        # content: |-
-        #   Some Projects or Activities:
-        #     - asdf
-      - title: "Information Technology Technician plus High School | Técnico em Informática Integrado ao Ensino Médio"
-        school:
-          name: "Federal Instituto of Goiás | Instituto Federal de Goiás (IFG)"
-          url: "http://cursos.ifg.edu.br/info/tecint/tec-inf-internet/CP-INH"
-        date: "2017 - 2019"
-
   # projects
   projects:
     enable: true
     # title: "Custom Name"
     items:
+      - title: Collaborative Text Editor
+        content: Backend written in Go for a simple Web-based collaborative text editor.
+        image: /images/projects/profile.png
+        featured:
+          name: Source-code
+          link: https://github.com/karlosdaniel451/collaborative-text-editor
+        badges:
+          - "Go"
+          - "REST"
+          - "Fiber"
+          - "Docker"
+          - "Docker Compose"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/karlosdaniel451/collaborative-text-editor
+
       - title: Patient Transference System - Sistema de Transferência de Pacientes (STP)
         content: |
           Academic project done in my Software Engineering Undergraduate Course along 3 other students.
@@ -263,6 +257,26 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/karlosdaniel451/twitter-timeline-system-design
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bacharelor in Software Engineering"
+        school:
+          name: "Federal University of Goiás | Universidade Federal de Goiás (UFG)"
+          url: "https://inf.ufg.br/p/30140-engenharia-de-software?atr=en&locale=en"
+        date: "2020 - Present"
+        # content: |-
+        #   Some Projects or Activities:
+        #     - asdf
+      - title: "Information Technology Technician plus High School | Técnico em Informática Integrado ao Ensino Médio"
+        school:
+          name: "Federal Instituto of Goiás | Instituto Federal de Goiás (IFG)"
+          url: "http://cursos.ifg.edu.br/info/tecint/tec-inf-internet/CP-INH"
+        date: "2017 - 2019"
 
   #Contact
   contact:
